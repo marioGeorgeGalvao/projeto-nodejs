@@ -1,0 +1,42 @@
+<div class="personage-component">
+    <div class="box-title">INFORMAÇÕES DO PERSONAGEM</div>
+    <div *ngIf="personage"> 
+      <h3> {{personage.name}}</h3>
+      <h4></h4>
+      <ul>
+        <li>Cor do cabelo: {{ personage.hair_color }}</li>
+        <li>Cor da pele: {{ personage.skin_color }}</li>
+        <li>Cor dos olhos: {{ personage.eye_color }}</li>
+        <li>Ano de nascimento: {{ personage.birth_year }}</li>
+        <li>Gênero: {{ personage.gender }}</li>
+        <li *ngIf="planet; else loadPlanet()">
+            Planeta Natal:  {{planet.name}}
+        </li>
+      </ul>
+      
+      <h3>Filmes</h3>
+      <ul *ngFor="let film of personage.films">
+        <li>{{ film.name }}</li>
+      </ul>
+      
+      <h3>Espécie</h3>
+      <ul *ngFor="let especie of personage.species">
+        <li>{{especie}}</li>
+      </ul>
+    
+      <h3>Veículos </h3>
+      <ul *ngFor="let veiculo of personage.vehicles">
+        <li>{{veiculo}}</li>
+      </ul>
+    
+      <h3>Espaçonaves</h3>
+      <ul *ngFor="let nave of personage.starships">
+        <li>{{nave}}</li>
+      </ul>
+    
+    </div>
+    <div *ngIf="!personage">Carregando dados do personagem... </div>
+</div>
+
+
+

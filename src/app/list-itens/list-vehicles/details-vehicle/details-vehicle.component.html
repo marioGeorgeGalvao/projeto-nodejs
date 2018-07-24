@@ -1,0 +1,32 @@
+<div class="vehicle-component">
+  <div class="box-title">INFORMAÇÕES DO VEÍCULO</div>
+  <div *ngIf="vehicle"> 
+    <h3> {{vehicle.name}}</h3>
+    <h4></h4>
+    <ul>
+      <li>Capacidade de Carga: {{ vehicle.cargo_capacity }}</li>
+      <li>Tempo de uso: {{ vehicle.consumables }}</li>
+      <li>Valor: R${{ vehicle.cost_in_credits }}</li>
+      <li>Tripulação: {{ vehicle.crew }}</li>
+      <li>Criado em: {{ vehicle.created }}</li>
+      <li>Editado em: {{ vehicle.edited }}</li>
+      <li>Comprimento: {{ vehicle.length }}</li>
+      <li>Fabricante: {{ vehicle.manufacturer }}</li>
+      <li>Velocidade na atmosfera: {{ vehicle.max_atmosphering_speed }}</li>
+      <li>Modelo: {{ vehicle.model }}</li>
+      <li>Lotação máxima: {{ vehicle.passengers }} passageiros</li>
+      <li>Classe do veículo: {{ vehicle.vehicle_class }}</li>
+    </ul>
+    
+    <h3>Pilotos</h3>
+    <ul *ngFor ="let pilot of vehicle.pilots">
+      <li>{{ pilot }}</li>
+    </ul>
+  
+    <h3>Filmes</h3>
+    <ul *ngFor="let film of vehicle.films">
+      <li>{{ film }}</li>
+    </ul>
+  </div>
+  <div *ngIf="!vehicle">Carregando dados do Veículo... </div>
+</div>

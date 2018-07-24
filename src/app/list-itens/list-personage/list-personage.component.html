@@ -1,0 +1,22 @@
+<div class="personage-component">
+  <div>
+    <div class="box-title">RELAÇÃO DE TODOS OS PERSONAGENS</div>
+  </div>
+  <div *ngIf = "list; else loading" class="row mt-3">
+    <div *ngFor="let personage of list.results; let i = index" class="col-md-4">
+      <div class="card name-list">
+        <div class="card-body">
+          <h6 class="card-title">{{ personage.name }}</h6>
+          <a [routerLink]= "['../detalhes/personagem/', personage.url ]" class="btn btn-secondary btn-sm">Detalhe do personagem</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="list.previous" type="button" class="btn btn-secondary" (click)="back()">Voltar</button>
+      <button *ngIf="list.next" type="button" class="btn btn-primary" (click)="next()">Próximo</button>
+    </div>
+  </div>
+  <ng-template #loading>
+      Carregando Informações...
+  </ng-template>
+</div>

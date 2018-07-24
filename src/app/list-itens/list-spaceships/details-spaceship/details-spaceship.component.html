@@ -1,0 +1,34 @@
+<div class="spaceship-component">
+  <div class="box-title">INFORMAÇÕES DA ESPAÇONAVE</div>
+  <div *ngIf="spaceship"> 
+    <h3> {{spaceship.name}}</h3>
+    <h4></h4>
+    <ul>
+      <li>MGLT: {{ spaceship.MGLT }}</li>
+      <li>Capacidade de Carga: {{ spaceship.cargo_capacity }}</li>
+      <li>Tempo de uso: {{ spaceship.consumables }}</li>
+      <li>Valor: R${{ spaceship.cost_in_credits }}</li>
+      <li>Criado em: {{ spaceship.created }}</li>
+      <li>Editado em: {{ spaceship.edited }}</li>
+      <li>tripulação: {{ spaceship.crew }}</li>
+      <li>Versão do Hyperdrive {{ spaceship.hyperdrive_rating }}</li>
+      <li>Comprimento: {{ spaceship.length }}</li>
+      <li>Fabricante: {{ spaceship.manufacturer }}</li>
+      <li>Velocidade na Atmosfera: {{ spaceship.max_atmosphering_speed }}</li>
+      <li>Modelo: {{ spaceship.model }}</li>
+      <li>Lotação máxima: {{ spaceship.passengers }} passageiros</li>
+      <li>Starship Class: {{ spaceship.starship_class }}</li>
+    </ul>
+    
+    <h3>Pilotos</h3>
+    <ul *ngFor ="let piloto of spaceship.pilots">
+      <li>{{ piloto }}</li>
+    </ul>
+  
+    <h3>Filmes</h3>
+    <ul *ngFor="let film of spaceship.films">
+      <li>{{ film }}</li>
+    </ul>
+  </div>
+  <div *ngIf="!spaceship">Carregando dados da Espaçonave... </div>
+</div>

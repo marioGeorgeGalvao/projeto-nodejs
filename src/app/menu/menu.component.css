@@ -1,0 +1,37 @@
+.menu {
+  float: left;
+  margin-top: 50px;
+  width: 30%;
+  text-transform: capitalize;
+  opacity: 0.95; 
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+
+  cursor: pointer;
+  list-style: none;
+  background-color: #2f00ff;
+  color: #ffffff; 
+  font-weight: bold;  
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: rgb(255, 227, 227);
+  color: black;
+}
+
+.menu-item img{
+  margin-right: 10px;
+  vertical-align: middle;
+}

@@ -1,0 +1,33 @@
+<div class="planet-component">
+  <div class="box-title">INFORMAÇÕES DO PLANETA</div>
+  <div *ngIf="planet"> 
+    <h3> {{planet.name}}</h3>
+    <h4></h4>
+    <ul>
+      <li>Clima: {{ planet.climate }}</li>
+      <li>Criado: {{ planet.created }}</li>
+      <li>Diametro: {{ planet.diameter }}</li>
+      <li>Editado: {{ planet.edited }}</li>
+      <li>Gravidade: {{ planet.gravity }}</li>
+      <li>Período Orbital: {{ planet.orbital_period}}</li>
+      <li>População: {{ planet.population}}</li>
+      <li>Período Rotacional: {{ planet.rotation_period}}</li>
+      <li>Superfície Aquática: {{ planet.surface_water}}</li>
+      <li>Terreno: {{ planet.terrain}}</li>
+    </ul>
+    
+    <h3>Filmes</h3>
+    <ul *ngFor ="let film of planet.films">
+      <li>Filme: {{ film }}</li>
+    </ul>
+  
+    <h3>Residentes</h3>
+    <ul *ngFor="let resident of planet.residents">
+      <li>{{ resident }}</li>
+    </ul>
+  </div>
+  <div *ngIf="!planet">Carregando dados do Planeta... </div>
+</div>
+
+
+

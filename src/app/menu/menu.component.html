@@ -1,0 +1,8 @@
+<ul class="menu" >
+  <a *ngFor="let starwar of filterByName()" [routerLink]="starwar.router">
+    <li class="menu-item">
+      <!-- <img [src]="starwar.resource_url" /> -->
+      <span>{{ starwar.number }} - {{ starwar.name }}</span>
+    </li>
+  </a>
+</ul>

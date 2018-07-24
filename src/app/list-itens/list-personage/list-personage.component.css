@@ -1,0 +1,23 @@
+h6{
+  color: green;
+  text-transform: uppercase;
+  font-size: 2.0em;
+}
+
+.personage-component {
+  float: right;
+  margin-top: 50px;
+  width: 50%;
+  opacity: 0.95;
+  border: 2px solid  #eed81f;
+  height: auto;
+}
+.box-title{
+  background-color: #eed81f;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.name-list{
+  margin: 2px;
+}

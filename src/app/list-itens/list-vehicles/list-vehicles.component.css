@@ -1,0 +1,16 @@
+.vehicles-component {
+  float: right;
+  margin-top: 50px;
+  width: 44%;
+  text-transform: capitalize;
+  opacity: 0.95;
+  border: 2px solid  #eed81f;
+  height: auto;
+}
+
+.box-title{
+  background-color: #eed81f;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}

@@ -1,0 +1,41 @@
+<div class="movie-component">
+  <div class="box-title">INFORMAÇÕES DO FILME</div>
+  <div *ngIf="movie"> 
+    <h3> {{movie.title}}</h3>
+    <ul>
+      <li>Diretor: {{ movie.director }}</li>
+      <li>Produtores:  {{ movie.producer }}</li>
+      <li>Criado em: {{ movie.created }}</li>
+      <li>Editado: {{ movie.edited }}</li>
+      <li>Data de Lançamento:  {{ movie.release_date }}</li>
+      <li>Id do episódio: {{ movie.episode_id }}</li>
+      <li>Opening Crawl: {{ movie.opening_crawl }}</li>
+      
+    </ul>
+    <h4>Personagens</h4>
+    <ul *ngFor ="let character of movie.characters">
+      <li>{{character}}</li>
+    </ul>
+    <h4>Planetas</h4>
+    <ul *ngFor="let planet of movie.planets">
+      <li>{{planet}}</li>
+    </ul>
+    <h4>Espécies</h4>
+    <ul *ngFor="let specie of movie.species">
+      <li>{{ specie }}</li>
+    </ul>
+    <h4>Veículos Utilizados</h4>
+    <ul *ngFor="let vehicle of movie.vehicles">
+      <li>{{vehicle}}</li>
+    </ul>
+    <h4>Espaçonaves</h4>
+    <ul *ngFor="let spaceship of movie.starships">
+      <li>{{spaceship}}</li>
+    </ul>
+  
+  </div>
+  <div *ngIf="!movie">Carregando dados do Filme... </div>
+</div>
+
+
+

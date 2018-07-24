@@ -1,0 +1,20 @@
+  <div class="species-component">
+  <div class="box-title">RELAÇÃO DE TODAS AS ESPÉCIES</div>
+  <div *ngIf = "listSpecies; else loading" class="row mt-3">
+    <div *ngFor="let specie of listSpecies.results; let i = index" class="col-md-4">
+      <div class="card name-list">
+        <div class="card-body">
+          <h6 class="card-title">{{ specie.name }}</h6>
+          <a [routerLink]= "['../detalhes/especie/', specie.url ]" class="btn btn-secondary btn-sm">Detalhe da espécie</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="listSpecies.previous" type="button" class="btn btn-secondary" (click)="back()">Voltar</button>
+      <button *ngIf="listSpecies.next" type="button" class="btn btn-primary" (click)="next()">Próximo</button>
+    </div>
+  </div>
+</div>
+  <ng-template #loading>
+    Carregando Informações...
+</ng-template>

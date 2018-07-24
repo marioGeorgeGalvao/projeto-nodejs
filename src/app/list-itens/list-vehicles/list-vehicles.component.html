@@ -1,0 +1,20 @@
+<div class="vehicles-component">
+  <div class="box-title">RELAÇÃO DE TODAS OS VEÍCULOS</div>
+  <div *ngIf = "listVehicles; else loading" class="row mt-3">
+    <div *ngFor="let vehicle of listVehicles.results; let i = index" class="col-md-4">
+      <div class="card name-list">
+        <div class="card-body">
+          <h6 class="card-title">{{ vehicle.name }}</h6>
+          <a [routerLink]= "['../detalhes/veiculo/', vehicle.url ]" class="btn btn-secondary btn-sm">Detalhe do veículo</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="listVehicles.previous" type="button" class="btn btn-secondary" (click)="back()">Voltar</button>
+      <button *ngIf="listVehicles.next" type="button" class="btn btn-primary" (click)="next()">Próximo</button>
+    </div>
+  </div>
+</div>
+  <ng-template #loading>
+    Carregando Informações...
+</ng-template>

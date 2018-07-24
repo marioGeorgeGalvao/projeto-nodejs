@@ -1,0 +1,23 @@
+<div class="planets-component">
+  <div class="box-title">RELAÇÃO DE TODOS OS PLANETAS</div>
+  <div *ngIf = "listPlanets; else loading" class="row mt-3">
+    <div *ngFor="let planet of listPlanets.results; let i = index" class="col-md-10">
+      <div class="card name-list">
+        <div class="card-body">
+          <h6 class="card-title">{{ planet.name }}</h6>
+          <a [routerLink]= "['../detalhes/planeta/', planet.url ]" class="btn btn-secondary btn-sm">Detalhe do Planeta</a>
+          
+        </div>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="listPlanets.previous" type="button" class="btn btn-secondary" (click)="back()">Voltar</button>
+      <button *ngIf="listPlanets.next" type="button" class="btn btn-primary" (click)="next()">Próximo</button>
+    </div>
+  </div>
+  <ng-template #loading>
+    Carregando...
+</ng-template>
+</div>
+  
+  

@@ -1,0 +1,6 @@
+export let API = "https://swapi.co/api/people/"
+export let API_MOVIE = "https://swapi.co/api/films/"
+export let API_SPACESHIP = "https://swapi.co/api/starships/"
+export let API_PLANET = "https://swapi.co/api/planets/"
+export let API_SPECIE = "https://swapi.co/api/species/"
+export let API_VEHICLE = "https://swapi.co/api/vehicles/"
