@@ -1,5 +1,5 @@
 .menu {
-  float: left;
+  float: right;
   margin-top: 50px;
   width: 30%;
   text-transform: capitalize;
@@ -13,11 +13,12 @@
   padding: 10px;
   margin-bottom: 5px;
   border: 1px solid black;
-
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   cursor: pointer;
   list-style: none;
-  background-color: #2f00ff;
-  color: #ffffff; 
+  background-color: #eed81f;
+  color: #000000; 
   font-weight: bold;  
 }
 
@@ -27,9 +28,7 @@ a{
 }
 
 .menu-item:hover {
-  background-color: rgb(255, 227, 227);
-  color: black;
-}
+  background-color: #555; }
 
 .menu-item img{
   margin-right: 10px;

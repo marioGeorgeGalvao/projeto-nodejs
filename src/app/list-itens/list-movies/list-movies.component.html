@@ -2,12 +2,12 @@
   <div>
     <div class="box-title">RELAÇÃO DE TODOS OS FILMES</div>
   </div>
-  <div *ngIf = "listMovies; else loading" class="row mt-10">
+  <div *ngIf = "listMovies; else loading" class="row mt-3">
     <div *ngFor="let movie of listMovies.results; let i = index" class="col-md-4">
       <div class="card name-list">
         <div class="card-body">
-          <h6 class="card-title">{{ movie.title }} - <button class="btn btn-primary" value="Detalhe do filme"><a [routerLink]= "['../detalhes/filme/', movie.url ]" class="btn btn-secondary btn-sm">Detalhe do filme</a></button></h6>
-          
+          <h6 class="card-title">{{ movie.title }}</h6>
+          <a [routerLink]= "['../detalhes/filme/', movie.url ]" class="btn btn-secondary btn-sm">Detalhe do filme</a>
         </div>
       </div>
     </div>

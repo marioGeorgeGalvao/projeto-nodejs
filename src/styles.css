@@ -1,8 +1,7 @@
 html {
   margin: 0;
-  background-color: white;     
-
-  /* background-image: url("assets/img/fundo-universo-starwar.png"); */
+  background-color: black;     
+  background-image: url("assets/img/fundo-universo-starwar.png");
   background-repeat:no-repeat;
   background-size: 100% 100%;
   width: 100%;

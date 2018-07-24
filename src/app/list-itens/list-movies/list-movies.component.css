@@ -1,6 +1,6 @@
 .movies-component {
   float: right;
-  margin: 50px 0 0 -42px;
+  margin-top: 50px;
   width: 44%;
   text-transform: capitalize;
   opacity: 0.95;
@@ -13,8 +13,4 @@
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
-}
-
-a{
-  text-transform: none;
 }
